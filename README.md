@@ -1,103 +1,102 @@
-# FinBot - Banking Assistant
+# FinBot — AI-Powered Banking Assistant
 
-<div align="center">
-  <img src="public/logo-simple.svg" alt="FinBot Logo" width="150" height="150"/>
-  <h3>Modern Banking Assistant with AI-Powered Capabilities</h3>
-</div>
+FinBot is an AI-powered banking assistant designed to help users resolve banking-related queries through intelligent, context-aware conversations. It combines fine-tuned language models with Retrieval-Augmented Generation (RAG) to provide relevant responses and support common banking tasks.
 
 ## Overview
 
-FinBot is an intelligent banking assistant designed to provide users with seamless, AI-powered banking support. With a modern UI and advanced features, FinBot serves as a comprehensive solution for customer inquiries and banking operations.
+FinBot aims to make banking support more accessible and efficient by allowing users to interact with an AI assistant through a conversational interface. It uses natural language processing and retrieval-based context to improve the relevance of its responses.
 
-## Key Features
+The project also explores multilingual interaction, voice-based communication, and automated issue escalation for cases such as suspected fraud or unauthorized transactions.
 
-### 🤖 User Query Resolution
-Accurately answers customer inquiries related to banking services using advanced natural language processing.
+## Features
 
-### 🧠 Contextual Database Layer
-Retains conversation context for more personalized and coherent responses throughout the user interaction.
+- **Intelligent Query Resolution:** Uses fine-tuned language models to understand and respond to banking-related queries.
+- **Context-Aware Responses:** Uses Retrieval-Augmented Generation (RAG) to provide responses informed by relevant retrieved information.
+- **Multilingual Support:** Designed to support interactions in multiple languages through API integration.
+- **Issue Escalation:** Supports a workflow for raising support tickets for fraud-related or unauthorized transactions.
+- **Voice Interaction:** Includes a voice interaction interface; voice recognition is simulated in the demo.
+- **Interactive User Interface:** Provides a conversational interface designed for a smooth user experience.
 
-### 🌐 Multilingual Support
-Provides seamless assistance in multiple languages (English, Spanish, and more) through seamless API integration.
+## AI and Machine Learning
 
-### 🚨 Agentic Behavior for Issue Escalation
-Automatically detects serious issues like fraud or unauthorized transactions and opens support tickets for immediate attention.
+### DistilBERT Fine-Tuning
 
-### 🎤 Voice Interaction
-Supports both voice input and output for a more natural conversational experience, making banking assistance accessible to all users.
+DistilBERT is fine-tuned for banking-related natural language processing tasks, helping the system interpret user queries and support the query-processing workflow.
 
-## Technology Stack
+### Mistral 7B Fine-Tuning
 
-- **Framework**: Next.js with React
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **UI Components**: Custom-built with shadcn/ui inspiration
+Mistral 7B is fine-tuned using parameter-efficient techniques to support natural language response generation for banking-related conversations.
+
+### Retrieval-Augmented Generation (RAG)
+
+FinBot uses a RAG pipeline with Pinecone for vector search and information retrieval. Retrieved context can be incorporated into the response-generation process to help produce more relevant answers.
+
+## System Architecture
+
+The following diagram illustrates FinBot's system architecture and the interactions between its components.
+
+![FinBot System Architecture](./finby_architecture.png)
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v16.8 or higher)
-- npm or pnpm
+
+- Node.js version 16.8 or later
+- npm
+- Required API credentials and service configuration, where applicable
 
 ### Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/hegdeadithyak/FinBot.git
+1. Clone the repository:
 
-# Navigate to the project directory
-cd FinBot
+   ```bash
+   git clone https://github.com/v12k5/FinBot1.git
+   ```
 
-# Install dependencies
-npm install
-# or
-pnpm install
+2. Navigate to the project directory:
 
-# Start the development server
-npm run dev
-# or
-pnpm dev
-```
+   ```bash
+   cd FinBot1
+   ```
 
-Visit `http://localhost:3000` to see the application in action.
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure the required environment variables and API credentials for the services used by the project.
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open the local URL displayed in your terminal, typically `http://localhost:3000`.
 
 ## Usage
 
-- Type your banking questions in the chat interface
-- Use voice commands by clicking the mic button
-- Switch languages with the language selector
-- Try keywords like "fraud" or "unauthorized transaction" to see the escalation system in action
-- Explore quick actions for common banking tasks
+1. Launch the application.
+2. Enter a banking-related question in the chat interface.
+3. Review the assistant's response.
+4. Explore the available conversation, language, and voice interaction features.
+5. Use the issue-escalation workflow where applicable.
 
-## Preview
+*Note: Some features depend on external API integration and configuration. Voice recognition is simulated in the demo.*
 
-<div align="center">
-  <p align="center"><strong>Modern UI with AI-Powered Features</strong></p>
-  <table>
-    <tr>
-      <td align="center"><strong>🌐 Multilingual Support</strong></td>
-      <td align="center"><strong>🎤 Voice Interaction</strong></td>
-      <td align="center"><strong>🚨 Issue Escalation</strong></td>
-    </tr>
-    <tr>
-      <td align="center">Switch between languages</td>
-      <td align="center">Speak with your assistant</td>
-      <td align="center">Auto-ticket generation</td>
-    </tr>
-  </table>
-</div>
+## Future Improvements
 
-## Implementation Notes
-
-- The LLM API integration is required for full functionality
-- Voice recognition capabilities are simulated in the demo
-- All UI components are fully responsive and mobile-friendly
+- Improve response accuracy across a wider range of banking queries.
+- Expand multilingual capabilities.
+- Integrate fully functional voice recognition and speech output.
+- Enhance the retrieval pipeline and knowledge base.
+- Improve issue escalation and support-ticket integration.
 
 ## License
 
-MIT License - See LICENSE file for details
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Contact
+## Acknowledgements
 
-For any inquiries or issues, please open an issue on GitHub or contact the repository owner. 
+FinBot was developed as a project exploring the application of fine-tuned language models, retrieval-augmented generation, and conversational AI to banking support.
